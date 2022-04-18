@@ -13,4 +13,5 @@ public class Warehouse {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     private String owner;
+    private String name;
 }
