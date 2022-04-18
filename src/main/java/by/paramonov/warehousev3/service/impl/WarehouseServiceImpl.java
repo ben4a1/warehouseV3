@@ -2,6 +2,7 @@ package by.paramonov.warehousev3.service.impl;
 
 import by.paramonov.warehousev3.entity.WarehouseEntity;
 import by.paramonov.warehousev3.exception.WarehouseNotFoundException;
+import by.paramonov.warehousev3.mapper.WarehouseToEntityMapper;
 import by.paramonov.warehousev3.model.Warehouse;
 import by.paramonov.warehousev3.repository.WarehouseRepository;
 import by.paramonov.warehousev3.service.WarehouseService;
@@ -17,13 +18,13 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class WarehouseServiceImpl implements WarehouseService {
     private final WarehouseRepository warehouseRepository;
+    private final WarehouseToEntityMapper mapper;
+
     @Override
     public Warehouse getWarehouseById(UUID id) {
         WarehouseEntity warehouseEntity = warehouseRepository.findById(id).
                 orElseThrow(() -> new WarehouseNotFoundException("Warehouse is not exists"));
-        return new Warehouse(warehouseEntity.getId(),
-                            warehouseEntity.getOwner(),
-                            warehouseEntity.getName());
+        return mapper.warehouseEntityToWarehouse(warehouseEntity);
     }
 
     @Override
@@ -31,19 +32,15 @@ public class WarehouseServiceImpl implements WarehouseService {
         Iterable<WarehouseEntity> warehouseEntities = warehouseRepository.findAll();
 
         ArrayList<Warehouse> warehouses = new ArrayList<>();
-        for (WarehouseEntity warehouseEntity : warehouseEntities){
-            warehouses.add(new Warehouse(warehouseEntity.getId(),
-                            warehouseEntity.getOwner(),
-                            warehouseEntity.getName()));
+        for (WarehouseEntity warehouseEntity : warehouseEntities) {
+            warehouses.add(mapper.warehouseEntityToWarehouse(warehouseEntity));
         }
         return warehouses;
     }
 
     @Override
     public void addWarehouse(Warehouse warehouse) {
-        WarehouseEntity warehouseEntity = new WarehouseEntity(null,
-                                                                warehouse.getOwner(),
-                                                                warehouse.getName());
+        WarehouseEntity warehouseEntity = mapper.warehouseToWarehouseEntity(warehouse);
         warehouseRepository.save(warehouseEntity);
     }
 }
