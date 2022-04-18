@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.UUID;
 
+//Service layer
 @Value
 public class Warehouse {
     @Id

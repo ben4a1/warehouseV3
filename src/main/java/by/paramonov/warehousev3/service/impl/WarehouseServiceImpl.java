@@ -40,6 +40,9 @@ public class WarehouseServiceImpl implements WarehouseService {
 
     @Override
     public void addWarehouse(Warehouse warehouse) {
-
+        WarehouseEntity warehouseEntity = new WarehouseEntity(null,
+                                                                warehouse.getOwner(),
+                                                                warehouse.getName());
+        warehouseRepository.save(warehouseEntity);
     }
 }

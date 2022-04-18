@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.UUID;
 
+//dal layer
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
