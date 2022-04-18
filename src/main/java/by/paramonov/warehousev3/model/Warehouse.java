@@ -3,13 +3,14 @@ package by.paramonov.warehousev3.model;
 import lombok.Value;
 
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.UUID;
 
 @Value
 public class Warehouse {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     private String owner;
 }
