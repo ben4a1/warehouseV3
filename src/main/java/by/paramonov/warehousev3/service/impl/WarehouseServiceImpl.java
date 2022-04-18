@@ -8,6 +8,7 @@ import by.paramonov.warehousev3.service.WarehouseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -26,7 +27,15 @@ public class WarehouseServiceImpl implements WarehouseService {
 
     @Override
     public List<Warehouse> getAllWarehouses() {
-        return null;
+        Iterable<WarehouseEntity> warehouseEntities = warehouseRepository.findAll();
+
+        ArrayList<Warehouse> warehouses = new ArrayList<>();
+        for (WarehouseEntity warehouseEntity : warehouseEntities){
+            warehouses.add(new Warehouse(warehouseEntity.getId(),
+                            warehouseEntity.getOwner(),
+                            warehouseEntity.getName()));
+        }
+        return warehouses;
     }
 
     @Override
