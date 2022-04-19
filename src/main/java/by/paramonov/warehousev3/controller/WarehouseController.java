@@ -28,6 +28,7 @@ public class WarehouseController {
         return warehouseService.getAllWarehouses();
     }
 
+    @PostMapping
     public void addWarehouse(@RequestBody AddWarehouseRequest request){
         warehouseService.addWarehouse(warehouseToDtoMapper
                         .addWarehouseRequestToWarehouse(request));
