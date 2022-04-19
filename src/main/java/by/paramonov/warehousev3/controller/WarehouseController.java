@@ -1,6 +1,6 @@
 package by.paramonov.warehousev3.controller;
 
-import by.paramonov.warehousev3.dto.WarehouseRequest;
+import by.paramonov.warehousev3.dto.AddWarehouseRequest;
 import by.paramonov.warehousev3.mapper.WarehouseToDtoMapper;
 import by.paramonov.warehousev3.model.Warehouse;
 import by.paramonov.warehousev3.service.WarehouseService;
@@ -28,7 +28,7 @@ public class WarehouseController {
         return warehouseService.getAllWarehouses();
     }
 
-    public void addWarehouse(@RequestBody WarehouseRequest request){
+    public void addWarehouse(@RequestBody AddWarehouseRequest request){
         warehouseService.addWarehouse(warehouseToDtoMapper
                         .addWarehouseRequestToWarehouse(request));
     }

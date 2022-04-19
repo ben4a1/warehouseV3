@@ -4,7 +4,7 @@ import lombok.Data;
 
 //data transfer object
 @Data
-public class WarehouseRequest {
+public class AddWarehouseRequest {
     private String owner;
     private String name;
 }
