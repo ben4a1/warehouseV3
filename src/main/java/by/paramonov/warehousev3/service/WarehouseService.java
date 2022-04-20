@@ -11,4 +11,5 @@ public interface WarehouseService {
 
     List<Warehouse> getAllWarehouses();
     void addWarehouse(Warehouse warehouse);
+    List<Warehouse> findAllWarehousesByOwner(String owner);
 }

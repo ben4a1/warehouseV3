@@ -43,4 +43,14 @@ public class WarehouseServiceImpl implements WarehouseService {
         WarehouseEntity warehouseEntity = mapper.warehouseToWarehouseEntity(warehouse);
         warehouseRepository.save(warehouseEntity);
     }
+
+    @Override
+    public List<Warehouse> findAllWarehousesByOwner(String owner) {
+        Iterable<WarehouseEntity> iterable = warehouseRepository.findAllWarehousesByOwner(owner);
+        ArrayList<Warehouse> warehouses = new ArrayList<>();
+        for (WarehouseEntity warehouseEntity : iterable){
+            warehouses.add(mapper.warehouseEntityToWarehouse(warehouseEntity));
+        }
+        return null;
+    }
 }
