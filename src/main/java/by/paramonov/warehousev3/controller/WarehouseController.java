@@ -24,7 +24,9 @@ public class WarehouseController {
     }
 
     @GetMapping
-    public List<Warehouse> getAllWarehouses(){
+    public List<Warehouse> getAllWarehouses(@RequestParam(required = false)String owner){
+        if (owner != null)
+            return warehouseService.findAllWarehousesByOwner(owner);
         return warehouseService.getAllWarehouses();
     }
 
