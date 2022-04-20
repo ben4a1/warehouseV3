@@ -1,18 +1,20 @@
 package by.paramonov.warehousev3.entity;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.UUID;
 
 //dal layer
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "warehouse")
+@AttributeOverride(name = "id", column = @Column(name = "warehouse_id"))
 public class WarehouseEntity extends BaseEntity {
 
     private String owner;
