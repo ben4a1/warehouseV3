@@ -21,7 +21,7 @@ public class WarehouseServiceImpl implements WarehouseService {
     private final WarehouseToEntityMapper mapper;
 
     @Override
-    public Warehouse getWarehouseById(UUID id) {
+    public Warehouse getWarehouseById(Long id) {
         WarehouseEntity warehouseEntity = warehouseRepository.findById(id).
                 orElseThrow(() -> new WarehouseNotFoundException("Warehouse is not exists"));
         return mapper.warehouseEntityToWarehouse(warehouseEntity);

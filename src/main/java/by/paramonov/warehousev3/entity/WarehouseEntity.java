@@ -13,10 +13,8 @@ import java.util.UUID;
 @AllArgsConstructor
 @Entity
 @Table(name = "warehouse")
-public class WarehouseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+public class WarehouseEntity extends BaseEntity {
+
     private String owner;
     private String name;
 
