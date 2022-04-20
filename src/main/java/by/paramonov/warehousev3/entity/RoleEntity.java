@@ -7,7 +7,6 @@ import javax.persistence.AttributeOverride;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.websocket.server.ServerEndpoint;
 
 @Entity
 @Table(name = "role")
