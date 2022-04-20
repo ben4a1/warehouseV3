@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class Warehouse {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private String owner;
-    private String name;
+    Long id;
+    String owner;
+    String name;
 }
