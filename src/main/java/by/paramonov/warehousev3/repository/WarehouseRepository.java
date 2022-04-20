@@ -7,5 +7,5 @@ import java.util.List;
 import java.util.UUID;
 
 public interface WarehouseRepository extends CrudRepository<WarehouseEntity, UUID> {
-    List<WarehouseEntity> findAllWarehousesByOwner(String owner);
+    List<WarehouseEntity> findAllByOwner(String owner);
 }
