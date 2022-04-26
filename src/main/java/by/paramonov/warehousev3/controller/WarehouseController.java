@@ -3,7 +3,7 @@ package by.paramonov.warehousev3.controller;
 import by.paramonov.warehousev3.dto.AddWarehouseRequest;
 import by.paramonov.warehousev3.mapper.WarehouseToDtoMapper;
 import by.paramonov.warehousev3.model.Warehouse;
-import by.paramonov.warehousev3.service.WarehouseService;
+import by.paramonov.warehousev3.repository.service.WarehouseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

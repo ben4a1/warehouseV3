@@ -1,17 +1,16 @@
-package by.paramonov.warehousev3.service.impl;
+package by.paramonov.warehousev3.repository.service.impl;
 
 import by.paramonov.warehousev3.entity.WarehouseEntity;
 import by.paramonov.warehousev3.exception.WarehouseNotFoundException;
 import by.paramonov.warehousev3.mapper.WarehouseToEntityMapper;
 import by.paramonov.warehousev3.model.Warehouse;
 import by.paramonov.warehousev3.repository.WarehouseRepository;
-import by.paramonov.warehousev3.service.WarehouseService;
+import by.paramonov.warehousev3.repository.service.WarehouseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 //Service layer
 @Service
