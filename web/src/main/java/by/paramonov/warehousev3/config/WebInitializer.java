@@ -1,4 +1,4 @@
-package by.paramonov.warehousev3;
+package by.paramonov.warehousev3.config;
 
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;

@@ -1,4 +1,4 @@
-package by.paramonov.warehousev3.dto;
+package by.paramonov.warehousev3.dto.request;
 
 import lombok.Data;
 

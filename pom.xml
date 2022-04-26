@@ -5,6 +5,7 @@
     <modules>
         <module>dal</module>
         <module>web</module>
+        <module>service</module>
     </modules>
 
     <groupId>by.paramonov</groupId>
@@ -16,7 +17,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <java.version>11</java.version>
-        <dal.version>0.0.1-SNAPSHOT</dal.version>
+        <warehouse.version>${version}</warehouse.version>
         <spring.version>5.3.18</spring.version>
         <spring.data.jpa.version>2.6.4</spring.data.jpa.version>
         <spring-security.version>5.6.2</spring-security.version>
@@ -34,7 +35,12 @@
             <dependency>
                 <groupId>by.paramonov.warehousev3</groupId>
                 <artifactId>dal</artifactId>
-                <version>${dal.version}</version>
+                <version>${warehouse.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>by.paramonov.warehousev3</groupId>
+                <artifactId>service</artifactId>
+                <version>${warehouse.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
