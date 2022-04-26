@@ -36,7 +36,10 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>by.paramonov.warehousev3</groupId>
+            <artifactId>service</artifactId>
+        </dependency>
 
     </dependencies>
 

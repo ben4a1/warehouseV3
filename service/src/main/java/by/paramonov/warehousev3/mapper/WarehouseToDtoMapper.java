@@ -1,6 +1,6 @@
 package by.paramonov.warehousev3.mapper;
 
-import by.paramonov.warehousev3.dto.AddWarehouseRequest;
+import by.paramonov.warehousev3.dto.request.AddWarehouseRequest;
 import by.paramonov.warehousev3.model.Warehouse;
 import org.mapstruct.Mapper;
 
