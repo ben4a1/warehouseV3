@@ -10,6 +10,41 @@
             <groupId>by.paramonov.warehousev3</groupId>
             <artifactId>dal</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.3.18</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>5.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>1.4.2.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>1.4.2.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>5.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.3.19</version>
+        </dependency>
     </dependencies>
 
     <groupId>by.paramonov</groupId>
@@ -25,7 +60,6 @@
         <postgresql.version>42.3.4</postgresql.version>
         <hibernate.version>6.0.0.Final</hibernate.version>
         <jakarta.persistence.verson>3.0.0</jakarta.persistence.verson>
-        <javax.persistence.version>2.2</javax.persistence.version>
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
         <junit.version>5.8.2</junit.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
@@ -105,11 +139,6 @@
                 <artifactId>javax.servlet-api</artifactId>
                 <version>${javax.servlet-api.version}</version>
                 <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>javax.persistence</groupId>
-                <artifactId>javax.persistence-api</artifactId>
-                <version>${javax.persistence.version}</version>
             </dependency>
 
 

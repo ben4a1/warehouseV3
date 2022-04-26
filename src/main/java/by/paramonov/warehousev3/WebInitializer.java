@@ -1,13 +1,23 @@
 package by.paramonov.warehousev3;
 
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-public class ServletInitializer extends SpringBootServletInitializer {
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
 
     @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(WarehouseV3Application.class);
+    protected Class<?>[] getRootConfigClasses() {
+        return new Class[0];
     }
 
+    @Override
+    protected Class<?>[] getServletConfigClasses() {
+        return new Class[0];
+    }
+
+    @Override
+    protected String[] getServletMappings() {
+        return new String[0];
+    }
 }
