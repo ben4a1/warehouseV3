@@ -1,4 +1,4 @@
-package by.paramonov.warehousev3.repository.service;
+package by.paramonov.warehousev3.service;
 
 import by.paramonov.warehousev3.model.Warehouse;
 

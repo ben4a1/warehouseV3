@@ -1,4 +1,4 @@
-package by.paramonov.warehousev3.repository.service.impl;
+package by.paramonov.warehousev3.service.impl;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
