@@ -18,6 +18,8 @@
         <spring-security.version>5.6.3</spring-security.version>
         <postgresql.version>42.3.4</postgresql.version>
         <hibernate.version>6.0.0.Final</hibernate.version>
+        <jakarta.persistence.verson>3.0.0</jakarta.persistence.verson>
+        <javax.persistence.version>2.2</javax.persistence.version>
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
         <junit.version>5.8.2</junit.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
@@ -82,10 +84,20 @@
             <version>${hibernate.version}</version>
         </dependency>
         <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>${jakarta.persistence.verson}</version>
+        </dependency>
+        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>${javax.servlet-api.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <version>${javax.persistence.version}</version>
         </dependency>
 
         <dependency>
