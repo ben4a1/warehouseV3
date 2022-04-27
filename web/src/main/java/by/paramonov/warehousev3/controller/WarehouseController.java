@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController()
 @RequestMapping("/warehouses")
@@ -19,7 +20,7 @@ public class WarehouseController {
     private final WarehouseToDtoMapper warehouseToDtoMapper;
 
     @GetMapping("/{id}")
-    public Warehouse getWarehouseById(@PathVariable Long id) {
+    public Warehouse getWarehouseById(@PathVariable UUID id) {
         return warehouseService.getWarehouseById(id);
     }
 

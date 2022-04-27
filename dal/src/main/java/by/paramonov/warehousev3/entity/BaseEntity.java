@@ -7,6 +7,8 @@ import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.UUID;
+
 
 @MappedSuperclass
 public abstract class BaseEntity {
@@ -14,5 +16,5 @@ public abstract class BaseEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Getter
     @Setter
-    private Long id;
+    private UUID id;
 }

@@ -8,6 +8,7 @@ import org.springframework.core.GenericTypeResolver;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.UUID;
 
 public class BaseDaoImpl<T> implements BaseDao<T> {
     @Autowired
@@ -21,7 +22,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
     }
 
     @Override
-    public T findOne(Long id) {
+    public T findOne(UUID id) {
         Session session = sessionFactory.getCurrentSession();
         return session.get(modelClass, id);
     }

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 //Service layer
 @Service
@@ -20,7 +21,7 @@ public class WarehouseServiceImpl implements WarehouseService {
     private final WarehouseToEntityMapper mapper;
 
     @Override
-    public Warehouse getWarehouseById(Long id) {
+    public Warehouse getWarehouseById(UUID id) {
         WarehouseEntity warehouseEntity = warehouseRepository.findById(id).
                 orElseThrow(() -> new WarehouseNotFoundException("Warehouse is not exists"));
         return mapper.warehouseEntityToWarehouse(warehouseEntity);
