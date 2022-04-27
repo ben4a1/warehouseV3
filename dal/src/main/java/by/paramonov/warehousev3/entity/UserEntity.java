@@ -1,9 +1,7 @@
 package by.paramonov.warehousev3.entity;
 
-import jakarta.persistence.AttributeOverride;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import by.paramonov.warehousev3.model.Role;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,6 +32,7 @@ public class UserEntity extends BaseEntity {
     private String secondName;
 
     @Column(name = "role")
-    private String role;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
 }
