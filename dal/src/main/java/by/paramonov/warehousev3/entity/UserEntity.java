@@ -29,7 +29,7 @@ public class UserEntity extends BaseEntity {
     private String firstName;
 
     @Column(name = "second_name")
-    private String secondName;
+    private String lastname;
 
     @Column(name = "role")
     @Enumerated(EnumType.STRING)

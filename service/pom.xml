@@ -44,6 +44,10 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+        <dependency>
             <groupId>by.paramonov.warehousev3</groupId>
             <artifactId>dal</artifactId>
         </dependency>
