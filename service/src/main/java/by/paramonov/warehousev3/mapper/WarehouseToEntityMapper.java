@@ -6,6 +6,7 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface WarehouseToEntityMapper {
+
     WarehouseEntity warehouseToWarehouseEntity(Warehouse warehouse);
     Warehouse warehouseEntityToWarehouse(WarehouseEntity warehouseEntity);
 }
