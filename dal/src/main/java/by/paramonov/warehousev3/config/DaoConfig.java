@@ -60,7 +60,7 @@ public class DaoConfig {
     public PersistenceExceptionTranslationPostProcessor exceptionProcessor() {
         return new PersistenceExceptionTranslationPostProcessor();
     }
-
+//TODO fix javax.persistance without javax.persistance
     @Bean
     public PlatformTransactionManager transactionManager() {
         JpaTransactionManager transactionManager = new JpaTransactionManager();
