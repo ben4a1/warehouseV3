@@ -11,6 +11,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
         "by.paramonov.warehousev3.mapper"
 })
 @EnableTransactionManagement
-@Import((DaoConfig.class))
+@Import(DaoConfig.class)
 public class ServiceConfig {
 }

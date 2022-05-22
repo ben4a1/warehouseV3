@@ -10,7 +10,8 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{
                 DaoConfig.class,
-
+                ServiceConfig.class,
+                ServiceConfig.class
         };
     }
 
