@@ -1,5 +1,6 @@
 package by.paramonov.warehousev3.config;
 
+import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -24,7 +25,7 @@ import java.util.Properties;
 @PropertySource("classpath:database.properties")
 @EnableTransactionManagement
 @ComponentScan(basePackages = "by.paramonov.warehousev3.repository")
-@EnableJpaRepositories(basePackages = "by.paramonov.warehousev3.repository")
+@EnableJpaRepositories(basePackages = "by.paramonov.warehousev3.repository", entityManagerFactoryRef="entityManagerFactory")
 public class DaoConfig {
     private Environment environment;
 
@@ -44,6 +45,7 @@ public class DaoConfig {
         return dataSource;
     }
 
+
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
@@ -52,7 +54,6 @@ public class DaoConfig {
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
         em.setJpaProperties(hibernateProperties());
-
         return em;
     }
 
